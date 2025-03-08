@@ -3,7 +3,7 @@
 # Compile duco-remote.ino for ESP32 and output binary to bin/
 
 # Set your board FQBN (Fully Qualified Board Name)
-BOARD_FQBN="esp32:esp32:esp32" # Example: esp32dev board. Change as needed.
+BOARD_FQBN="esp32:esp32:esp32" # Example: esp32 board. Change as needed.
 
 # Set the path to your duco-remote.ino file
 SKETCH_PATH="duco-remote"
