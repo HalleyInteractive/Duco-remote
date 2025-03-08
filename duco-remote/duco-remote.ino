@@ -1,4 +1,3 @@
-// Include the RadioLib library
 #include <RadioLib.h>
 
 // Define the CC1101 module
@@ -9,7 +8,7 @@ void setup() {
   Serial.println(F("Starting CC1101 test"));
 
   // Initialize the radio module
-  int state = radio.begin(868.0); // Set frequency to 868 MHz
+  int state = radio.begin(868.326); // Set frequency to 868.326 MHz
 
   if (state == RADIOLIB_ERR_NONE) {
     Serial.println(F("CC1101 initialization successful!"));
@@ -19,10 +18,11 @@ void setup() {
     while (true); // Stop execution if initialization fails
   }
 
-  // Configure parameters (optional, adjust as needed)
-  radio.setBitRate(9.6); // Set bitrate (kbps)
-  radio.setFrequencyDeviation(5.0); // Set frequency deviation (kHz)
-  radio.setRxBandwidth(58.0); // Set receive bandwidth (kHz)
+  // Configure parameters (adjust as needed)
+  radio.setBitrate(38.3835); // Set bitrate (kbps)
+  radio.setFrequencyDeviation(20.629883); // Set frequency deviation (kHz)
+  radio.setRxBandwidth(101.562500); // Set receive bandwidth (kHz)
+  radio.setModulation(RADIOLIB_GFSK); // Set modulation to GFSK
 }
 
 void loop() {
